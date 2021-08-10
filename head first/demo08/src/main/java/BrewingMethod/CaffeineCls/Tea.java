@@ -1,0 +1,17 @@
+package BrewingMethod.CaffeineCls;
+
+import BrewingMethod.Abstract.CaffeineBeverage;
+
+/*283页：茶的冲泡法*/
+public class Tea extends CaffeineBeverage {
+
+	/*茶需要定义brew()和addCondiments(),这两个抽象方法来自Beverage类*/
+	public void brew() {
+		System.out.println("用沸水浸泡茶叶");
+	}
+
+	public void addCondiments() {
+		System.out.println("加柠檬");
+	}
+
+}

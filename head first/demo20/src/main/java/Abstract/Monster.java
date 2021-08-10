@@ -1,0 +1,26 @@
+package Abstract;
+
+public abstract class Monster implements Cloneable {
+	boolean eatsChildren = true;
+	public boolean hasWings = false;
+	public int numHeads = 1;
+	public boolean canBreatheFire = false;
+	public String name;
+	public Monster(String name) {
+		this.name = name;
+	}
+	public void spitPoison() { } // default is do nothing
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	public abstract Monster copy() throws CloneNotSupportedException;
+	
+	public String toString() {
+		StringBuffer s = new StringBuffer("I'm a monster named " + this.name + " with " + this.numHeads + " head(s). ");
+		if (this.canBreatheFire) { s.append("I can breathe fire. "); }
+		if (this.eatsChildren) { s.append("I eat children. "); }
+		if (this.hasWings) { s.append("I have wings. "); }
+		return s.toString();
+	}
+}
